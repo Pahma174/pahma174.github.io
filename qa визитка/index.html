@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QA Инженер - Имя Фамилия</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #33f0ff; /* Измените цвет фона здесь */
+        }
+
+        header {
+            background-color: #33c1ff; /* Измените цвет фона здесь */
+            color: #fff;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        #language-selector {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        #profile-img {
+            max-width: 20%;
+            border-radius: 50%; /* Делаем круглым */
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            background-color: #fff;
+            color: #4CAF50; /* Измените цвет текста кнопки здесь */
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #4CAF50; /* Измените цвет фона при наведении здесь */
+            color: #fff;
+        }
+
+        section {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        h2 {
+            color: #4CAF50; /* Измените цвет текста заголовка здесь */
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+            p {
+                font-size: 1em;
+            }
+            .cta-button {
+                font-size: 1em;
+            }
+            h2 {
+                font-size: 1.8em;
+            }
+            li {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+            <div id="language-selector">
+        <label for="language">Language:</label>
+        <select id="language" onchange="changeLanguage()">
+            <option value="en">English</option>
+            <option value="ru">Русский</option>
+        </select>
+    </div>
+        <img id="profile-img" src="images/1.jpeg" alt="Your Name">
+        <h1 id="header-text">QA Инженер - Pahomenko Andrey</h1>
+        <p id="intro-text">Оптимизация качества программного обеспечения через тщательное тестирование и автоматизацию.</p>
+        <a href="#contact" class="cta-button" id="contact-button">Свяжитесь со мной</a>
+
+
+    </header>
+
+    <section>
+        <h2 id="skills-header">Мои навыки</h2>
+        <ul>
+            <li id="automation">Автоматизация тестирования (Selenium, JUnit, TestNG)</li>
+            <li id="manual-testing">Ручное тестирование и отладка</li>
+            <li id="api-testing">Тестирование API (RESTful)</li>
+            <li id="database-skills">Навыки работы с базами данных (SQL)</li>
+            <li id="requirements-analysis">Анализ требований и создание тест-кейсов</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2 id="contact-header">Связаться со мной</h2>
+        <p id="contact-text">Готовы начать работу? Свяжитесь со мной для обсуждения проекта.</p>
+        <ul>
+            <li>Email: <a href="mailto:pahomenko174@yandex.ru" id="email-link">pahomenko174@yandex.ru</a></li>
+            <li>Stackoverflow: <a href="https://stackoverflow.com/users/23077820" target="_blank" id="stackoverflow-link">23077820</a></li>
+            <li>GitHub: <a href="https://github.com/Pahma174" target="_blank" id="github-link">Pahma174</a></li>
+        </ul>
+    </section>
+
+
+
+    <script>
+        function changeLanguage() {
+            const selectedLanguage = document.getElementById("language").value;
+            const translations = {
+                "en": {
+                    "header-text": "QA Engineer - Pahomenko Andrey",
+                    "intro-text": "Optimizing software quality through meticulous testing and automation.",
+                    "contact-button": "Contact Me",
+                    "skills-header": "My Skills",
+                    "automation": "Test Automation (Selenium, JUnit, TestNG)",
+                    "manual-testing": "Manual Testing and Debugging",
+                    "api-testing": "API Testing (RESTful)",
+                    "database-skills": "Database Skills (SQL)",
+                    "requirements-analysis": "Requirements Analysis and Test Case Creation",
+                    "contact-header": "Contact Me",
+                    "contact-text": "Ready to start working? Contact me to discuss the project.",
+                    "email-link": "pahomenko174@yandex.ru",
+                    "stackoverflow-link": "23077820",
+                    "github-link": "Pahma174"
+                },
+                "ru": {
+                    "header-text": "QA Инженер - Пахоменко Андрей",
+                    "intro-text": "Оптимизация качества программного обеспечения через тщательное тестирование и автоматизацию.",
+                    "contact-button": "Свяжитесь со мной",
+                    "skills-header": "Мои навыки",
+                    "automation": "Автоматизация тестирования (Selenium, JUnit, TestNG)",
+                    "manual-testing": "Ручное тестирование и отладка",
+                    "api-testing": "Тестирование API (RESTful)",
+                    "database-skills": "Навыки работы с базами данных (SQL)",
+                    "requirements-analysis": "Анализ требований и создание тест-кейсов",
+                    "contact-header": "Связаться со мной",
+                    "contact-text": "Готовы начать работу? Свяжитесь со мной для обсуждения проекта.",
+                    "email-link": "pahomenko174@yandex.ru",
+                    "stackoverflow-link": "23077820",
+                    "github-link": "Pahma174"
+                }
+            };
+
+            document.getElementById("header-text").textContent = translations[selectedLanguage]["header-text"];
+            document.getElementById("intro-text").textContent = translations[selectedLanguage]["intro-text"];
+            document.getElementById("contact-button").textContent = translations[selectedLanguage]["contact-button"];
+            document.getElementById("skills-header").textContent = translations[selectedLanguage]["skills-header"];
+            document.getElementById("automation").textContent = translations[selectedLanguage]["automation"];
+            document.getElementById("manual-testing").textContent = translations[selectedLanguage]["manual-testing"];
+            document.getElementById("api-testing").textContent = translations[selectedLanguage]["api-testing"];
+            document.getElementById("database-skills").textContent = translations[selectedLanguage]["database-skills"];
+            document.getElementById("requirements-analysis").textContent = translations[selectedLanguage]["requirements-analysis"];
+            document.getElementById("contact-header").textContent = translations[selectedLanguage]["contact-header"];
+            document.getElementById("contact-text").textContent = translations[selectedLanguage]["contact-text"];
+            document.getElementById("email-link").textContent = translations[selectedLanguage]["email-link"];
+            document.getElementById("stackoverflow-link").textContent = translations[selectedLanguage]["stackoverflow-link"];
+            document.getElementById("github-link").textContent = translations[selectedLanguage]["github-link"];
+        }
+    </script>
+
+</body>
+</html>
